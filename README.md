@@ -10,6 +10,8 @@ A simple React app example using NextJS, Mapbox and Deck.gl to visualise all fli
 npm install
 ```
 
+2. Replace `<your-mapbox-api-token-here>` in `pages/index.jsx` with your own mapbox api access token
+
 ## Usage
 
 1. Run web server

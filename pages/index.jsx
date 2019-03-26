@@ -16,7 +16,7 @@ const Index = () => {
       <ReactMapGL
         {...viewport}
         onViewportChange={newViewport => setViewport(newViewport)}
-        mapboxApiAccessToken="pk.eyJ1IjoiZ3BuZyIsImEiOiJjamZ0eXl3bGIzcWpoMndta3RmMG41dWw5In0.jMOkvFC0JBKLf1bOdaOfyA"
+        mapboxApiAccessToken="<your-mapbox-api-token-here>"
         mapStyle="mapbox://styles/mapbox/light-v9"
       >
         <DeckGL
