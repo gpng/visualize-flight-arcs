@@ -1,0 +1,5 @@
+# node dependancies
+node_modules/
+
+# next build folder
+.next/
