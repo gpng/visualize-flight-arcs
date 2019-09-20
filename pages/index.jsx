@@ -20,7 +20,7 @@ const Index = () => {
         mapStyle="mapbox://styles/mapbox/light-v9"
       >
         <DeckGL
-          {...viewport}
+          viewState={viewport}
           layers={[
             new ArcLayer({
               id: "flight-arcs",
@@ -29,7 +29,7 @@ const Index = () => {
               getTargetPosition: d => d.target,
               getSourceColor: () => [255, 0, 0, 120],
               getTargetColor: () => [0, 255, 0, 120],
-              getStrokeWidth: () => 2
+              getWidth: () => 2
             })
           ]}
         />
