@@ -8,15 +8,15 @@ import arcs from "../data/arcs.json";
 const Index = () => {
   const [viewport, setViewport] = useState({
     height: "100%",
-    width: "100%"
+    width: "100%",
   });
 
   return (
     <div className="root">
       <ReactMapGL
         {...viewport}
-        onViewportChange={newViewport => setViewport(newViewport)}
-        mapboxApiAccessToken="<your-mapbox-api-token-here>"
+        onViewportChange={(newViewport) => setViewport(newViewport)}
+        mapboxApiAccessToken="pk.eyJ1IjoiZ3BuZyIsImEiOiJja2J6OG51Y3ExN2FtMnd0YmYxd211dTJuIn0.NiYgattnRnFtP8T5N9SnTg"
         mapStyle="mapbox://styles/mapbox/light-v9"
       >
         <DeckGL
@@ -25,12 +25,12 @@ const Index = () => {
             new ArcLayer({
               id: "flight-arcs",
               data: arcs,
-              getSourcePosition: d => d.source,
-              getTargetPosition: d => d.target,
+              getSourcePosition: (d) => d.source,
+              getTargetPosition: (d) => d.target,
               getSourceColor: () => [255, 0, 0, 120],
               getTargetColor: () => [0, 255, 0, 120],
-              getWidth: () => 2
-            })
+              getWidth: () => 2,
+            }),
           ]}
         />
       </ReactMapGL>
